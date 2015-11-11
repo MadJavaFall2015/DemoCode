@@ -8,12 +8,12 @@ import java.util.*;
      /** The main method to test the Menu items
       */
      public static void main(String[] args) {
-         MenuItem pizza = new MenuItem();
+         MenuItem pizza = new Entree();
          pizza.setName("Margherita");
          pizza.setDescription("Tomatoes, garlic, lotsa cheese, basil, tomato sauce");
          
          
-         MenuItem pizza2 = new MenuItem();
+         MenuItem pizza2 = new Entree();
          pizza2.setName("Pepperoni");
          pizza2.setDescription("Pepperoni, cheese, tomato sauce");
         
@@ -40,6 +40,15 @@ import java.util.*;
          for (MenuItem item : items) {
              System.out.println(item);
          }
+         
+         Order myOrder = new Order();
+         myOrder.setCustomerName("Billy");
+         myOrder.addMenuItem(coke);
+         myOrder.addMenuItem(pizza);
+         System.out.println();
+         System.out.println(myOrder);
+        
+         
          
          
          

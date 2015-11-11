@@ -2,11 +2,13 @@
  * @author Paula Waite
  */
  
- public class MenuItem {
+ public abstract class MenuItem {
     private String name;
     private String description;
 
-	/**
+    public abstract void prepare();
+	
+    /**
 
 	 * Returns the value of name.
 
@@ -62,7 +64,7 @@
      */
     public String toString() {
         
-        return name + " : " + description;
+        return name + " : " + description + System.lineSeparator();
         
     }
  

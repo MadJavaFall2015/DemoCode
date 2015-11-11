@@ -1,6 +1,10 @@
 public class Drink extends MenuItem {
     private boolean alcoholic;
     private String size;
+    
+    public void prepare() {
+        System.out.println("Pouring the " + getName());
+    }
 
 	/**
 
@@ -72,7 +76,7 @@ public class Drink extends MenuItem {
         if (alcoholic) {
            alcoholicOrNonAlcoholic = "alcoholic"; 
         }
-        return super.toString() + ". This is a " + size + " " + alcoholicOrNonAlcoholic + " drink";
+        return super.toString() + " This is a " + size + " " + alcoholicOrNonAlcoholic + " drink" + System.lineSeparator();
         
     }
 
