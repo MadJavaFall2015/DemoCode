@@ -1,0 +1,1 @@
+javadoc -d docs -private -author -sourcepath src java111.project5 java111.project5.labs java111.project5.demo 
