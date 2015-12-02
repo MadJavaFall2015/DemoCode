@@ -16,9 +16,10 @@ import java.util.*;
           
          Restaurant myRestaurant = new Restaurant("Chipotle","Mexicanish" );
          restaurants.add(myRestaurant);
+         System.out.println(myRestaurant);
          
          Restaurant restaurant2 = new Restaurant("Pizza Hut", "Italianish");
-         
+          System.out.println(restaurant2);
          restaurants.add(restaurant2);
          
       //   restaurants[2] = new Restaurant();
@@ -42,10 +43,17 @@ import java.util.*;
          }
      }
      
+     public void displayRestaurantCount() {
+        System.out.println("The count is: " + Restaurant.getCount());   
+     }
+     
      /** Call the methods for processing a restaurant */
      public void run() {
+         displayRestaurantCount();
          createRestaurants();
          displayRestaurants();
+         restaurants = null;
+         displayRestaurantCount();
      }
         
        

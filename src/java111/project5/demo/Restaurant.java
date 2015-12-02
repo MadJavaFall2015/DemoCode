@@ -7,10 +7,13 @@ package java111.project5.demo;
  public class Restaurant {
     private String name;
     private String type;
+    public static int count;
+
+	
 
     /** No-arg constructor for Restaurant **/
-    public Restaurant() {
-    
+  public Restaurant() {
+        count++;
     }
     
     /** Creates a restaurant object and sets the name and type
@@ -18,11 +21,25 @@ package java111.project5.demo;
      *  @param type Restaurant type
      */
     public Restaurant(String name, String type) {
+        //this();
         this.name = name;
         this.type = type;
         
     
     }
+    
+    /**
+
+	 * Returns the value of count.
+
+	 */
+
+	public static int getCount() {
+
+		return count;
+
+	}
+
 	
     /**
 
@@ -100,7 +117,7 @@ package java111.project5.demo;
      */
     public String toString() {
         
-        return super.toString() + "Serving food from " + name + " is a " + type + " restaurant";
+        return super.toString() + "Serving food from " + name + " is a " + type + " restaurant. The count is now " + count;
         
     }
  
